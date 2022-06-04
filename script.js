@@ -6,10 +6,8 @@ window.onload = () =>{
 }
 
 function binaryChangeHandler(e){
-    if(parseInt(e.key)!=1 && parseInt(e.key)!=0 && e.key!="Enter")
+    if(parseInt(e.key)!=1 && parseInt(e.key)!=0 && e.key!="Enter" && e.key!="Backspace")
         setTimeout(() => {cancelInputChange(e.key)},20)
-    else if(e.key=="Enter")
-        convert()
     else setTimeout(()=>{convert()},2)
 }
 
