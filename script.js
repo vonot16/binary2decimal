@@ -17,6 +17,10 @@ function cancelInputChange(key){
 }
 
 function convert(){
-    let binary = [...binaryInput.value]
-    console.log(binary)
+    let binary = [...binaryInput.value].reverse()
+    let decimal = 0;
+    binary.forEach((number,power)=>{
+        decimal += number*Math.pow(2,power)
+    })
+    decimalInput.value = decimal
 }
