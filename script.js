@@ -10,6 +10,7 @@ function binaryChangeHandler(e){
         setTimeout(() => {cancelInputChange(e.key)},20)
     else if(e.key=="Enter")
         convert()
+    else setTimeout(()=>{convert()},2)
 }
 
 function cancelInputChange(key){
